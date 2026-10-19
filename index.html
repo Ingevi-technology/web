@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones & Gestión de Villas | Soluciones Eléctricas & Domótica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #D97706;
+            --accent-hover: #B45309;
+            --bg-light: #F8FAFC;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--white);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #E2E8F0;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Container & Services */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 16px;
+            margin-top: 2rem;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: #94A3B8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VILLA<span>TECH</span></div>
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Instalaciones de Alto Nivel & Gestión Integral de Villas</h1>
+        <p>Soluciones eléctricas avanzadas, domótica, iluminación técnica y mantenimiento exclusivo para residencias de lujo.</p>
+        <a href="#contacto" class="btn">Solicitar Presupuesto</a>
+    </section>
+
+    <div class="container" id="servicios">
+        <div class="section-title">
+            <h2>Nuestros Servicios Especializados</h2>
+            <p>Garantizamos la máxima eficiencia, seguridad y tecnología para su propiedad</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Instalaciones Eléctricas</h3>
+                <p>Proyectos integrales en obra nueva y reformas. Cuadros eléctricos de alta seguridad, actualización de cableado e instalación de mecanismos de diseño.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Domótica & Automatización</h3>
+                <p>Control inteligente de climatización, persianas, iluminación y escenarios personalizados desde su smartphone o pantalla táctil.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Iluminación Técnica & Jardines</h3>
+                <p>Diseño de proyectos lumínicos arquitectónicos para interiores y exteriores. Creación de ambientes exclusivos en jardines y zonas de piscina.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Videoporteros & Control de Acceso</h3>
+                <p>Sistemas de seguridad de última generación, videoporteros IP con conexión remota y control de accesos para propietarios y personal.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Cuadros Eléctricos & Protección</h3>
+                <p>Montaje, diagnosis y optimización de cuadros de mando y protección, protecciones contra sobretensiones y gestión energética.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión & Mantenimiento de Villas</h3>
+                <p>Servicio de asistencia rápida, mantenimiento preventivo y puesta a punto continua para que su villa funcione perfectamente todo el año.</p>
+            </div>
+        </div>
+
+        <div class="contact" id="contacto">
+            <h2>¿Tiene un proyecto o residencia en mente?</h2>
+            <p>Ofrecemos atención personalizada y presupuestos detallados sin compromiso.</p>
+            <div class="contact-info">
+                <div class="contact-item">📞 <strong>Teléfono:</strong> +34 600 000 000</div>
+                <div class="contact-item">✉️ <strong>Email:</strong> info@tuempresa.com</div>
+            </div>
+            <a href="mailto:info@tuempresa.com" class="btn">Enviar un Mensaje</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Instalaciones y Gestión de Villas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
